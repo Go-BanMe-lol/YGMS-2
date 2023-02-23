@@ -1,0 +1,1 @@
+Ypsilon Gamemode Switcher readme. Basically this is minecraft mod that works like admin grant function from The bottom of the void ARG. Nothing too special about it.
