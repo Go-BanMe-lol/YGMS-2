@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "ygs",
+  "version": "${version}",
+
+  "name": "Ypsilon Gamemode Switcher",
+  "description": "This is gamemode switcher similar to admin grant function seen in The Let's play archive ARG.",
+  "authors": [
+    "Go_BanMe_lol"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT License",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.GoBanMelol.ygs.ygs"
+    ],
+    "client": [
+      "net.GoBanMelol.ygs.ygsClient"
+    ]
+
+  },
+  "mixins": [
+    "ygs.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.11",
+    "fabric-api": "*",
+    "minecraft": "~1.19.3",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
