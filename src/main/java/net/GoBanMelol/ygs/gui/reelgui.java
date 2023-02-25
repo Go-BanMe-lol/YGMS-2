@@ -27,7 +27,7 @@ public class reelgui extends LightweightGuiDescription {
         root.add(label2,4, 2);
 
         WButton button = new WButton(Text.literal("Yes"));
-        root.add(button, 1, 4, 2, 20);
+        root.add(button, 0, 3, 4, 20);
         button.setOnClick(() -> {
             // This code runs on the client when you click the button.
             System.out.println("Yes");
@@ -35,7 +35,7 @@ public class reelgui extends LightweightGuiDescription {
         });
 
         WButton button2 = new WButton(Text.literal("No"));
-        root.add(button2, 7, 4, 2, 20);
+        root.add(button2, 5, 3, 4, 20);
         button2.setOnClick(() -> {
 
             System.out.println("No");
