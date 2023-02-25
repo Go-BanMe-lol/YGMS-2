@@ -1,5 +1,6 @@
 package net.GoBanMelol.ygs.networking;
 
+import net.GoBanMelol.ygs.networking.packet.G12C2S;
 import net.GoBanMelol.ygs.networking.packet.G1C2S;
 import net.GoBanMelol.ygs.ygs;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
@@ -14,6 +15,7 @@ public class ModMessages {
     public static void registerC2SPackets() {
         //ServerPlayerEntity.
         ServerPlayNetworking.registerGlobalReceiver(G_1, G1C2S::receive);
+        ServerPlayNetworking.registerGlobalReceiver(G_12, G12C2S::receive);
     }
 
     public static void registerS2CPackets() {
