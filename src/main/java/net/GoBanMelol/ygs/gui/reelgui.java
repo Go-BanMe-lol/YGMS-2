@@ -4,18 +4,23 @@ import io.github.cottonmc.cotton.gui.widget.WButton;
 import io.github.cottonmc.cotton.gui.widget.WGridPanel;
 import io.github.cottonmc.cotton.gui.widget.WLabel;
 import io.github.cottonmc.cotton.gui.widget.data.HorizontalAlignment;
-import io.github.cottonmc.cotton.gui.widget.data.Texture;
-import io.github.cottonmc.cotton.gui.widget.icon.TextureIcon;
+//import io.github.cottonmc.cotton.gui.widget.data.Texture;
+//import io.github.cottonmc.cotton.gui.widget.icon.TextureIcon;
+//import net.minecraft.client.MinecraftClient;
+//import net.minecraft.client.network.ClientPlayNetworkHandler;
+import net.minecraft.server.command.GameModeCommand;
+//import net.minecraft.server.dedicated.PendingServerCommand;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
-//import net.minecraft.client.;
-
+import net.minecraft.world.GameMode;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.MinecraftClientGame;
 
 public class reelgui extends LightweightGuiDescription {
     public reelgui() {
         WGridPanel root = new WGridPanel();
         setRootPanel(root);
         root.setSize(8, 5);
-
         WLabel label = new WLabel(Text.literal("Affirm?"));
         //криво сделано, если не будет работать, то поставлю new WLabel("Affirm?")
         label.setHorizontalAlignment(HorizontalAlignment.CENTER);
@@ -29,16 +34,16 @@ public class reelgui extends LightweightGuiDescription {
         WButton button = new WButton(Text.literal("Yes"));
         root.add(button, 0, 3, 4, 20);
         button.setOnClick(() -> {
-            // This code runs on the client when you click the button.
             System.out.println("Yes");
+            //player.ChangeGameMode(GameMode.CREATIVE);
             //Пока пусть будет заглушкой, потом надо будет заменить выдачу/снятие креатива.
         });
 
         WButton button2 = new WButton(Text.literal("No"));
         root.add(button2, 5, 3, 4, 20);
         button2.setOnClick(() -> {
-
             System.out.println("No");
+
             //Пока пусть будет заглушкой, потом надо будет заменить выдачу/снятие креатива.
         });
 
