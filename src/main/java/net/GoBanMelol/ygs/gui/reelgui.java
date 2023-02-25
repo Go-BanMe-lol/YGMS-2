@@ -8,6 +8,10 @@ import io.github.cottonmc.cotton.gui.widget.data.HorizontalAlignment;
 //import io.github.cottonmc.cotton.gui.widget.icon.TextureIcon;
 //import net.minecraft.client.MinecraftClient;
 //import net.minecraft.client.network.ClientPlayNetworkHandler;
+import net.GoBanMelol.ygs.networking.ModMessages;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
+import net.minecraft.network.PacketByteBuf;
 import net.minecraft.server.command.GameModeCommand;
 //import net.minecraft.server.dedicated.PendingServerCommand;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -35,6 +39,8 @@ public class reelgui extends LightweightGuiDescription {
         root.add(button, 0, 3, 4, 20);
         button.setOnClick(() -> {
             System.out.println("Yes");
+            ClientPlayNetworking.send(ModMessages.G_1, PacketByteBufs.create());
+
             //player.ChangeGameMode(GameMode.CREATIVE);
             //Пока пусть будет заглушкой, потом надо будет заменить выдачу/снятие креатива.
         });
@@ -43,7 +49,7 @@ public class reelgui extends LightweightGuiDescription {
         root.add(button2, 5, 3, 4, 20);
         button2.setOnClick(() -> {
             System.out.println("No");
-
+            ClientPlayNetworking.send(ModMessages.G_12, PacketByteBufs.create());
             //Пока пусть будет заглушкой, потом надо будет заменить выдачу/снятие креатива.
         });
 

@@ -9,9 +9,9 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.world.GameMode;
 //import net.minecraft.server.network.ServerPlayerInteractionManager;
 
-public class G1C2S {
+public class G12C2S {
     public static void receive(MinecraftServer server, ServerPlayerEntity player, ServerPlayNetworkHandler handler, PacketByteBuf buf, PacketSender responseSender) {
         //only on the server
-        player.changeGameMode(GameMode.CREATIVE);
+        player.changeGameMode(GameMode.SURVIVAL);
     }
 }
